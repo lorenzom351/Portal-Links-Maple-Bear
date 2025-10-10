@@ -1,0 +1,182 @@
+/* Importação da Fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Variáveis de Cores e Estilos Globais */
+:root {
+    --primary-red: #c71010;
+    --primary-red-darker: #c71010;
+    --background-white: #FFFFFF;
+    --text-white: #FFFFFF;
+    
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estrutura Global */
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-white);
+    overflow: hidden; /* impede rolagem da página inteira */
+}
+
+/* Estrutura Principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Painel da Esquerda (Mascote fixo) */
+.image-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 65%; /* ajuste conforme desejar */
+  height: 100%;
+  background: url('URL-DA-SUA-IMAGEM.png') center center no-repeat;
+  background-size: cover; /* 🔹 garante que a imagem cubra tudo */
+}
+
+
+.mascot-image {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Painel da Direita (Conteúdo rolável) */
+.links-panel {
+    margin-left: 50%;          /* 🚀 Deixa espaço para o painel fixo */
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    overflow-y: auto;          /* 🚀 Só este lado rola */
+    scroll-behavior: smooth;
+}
+
+.texto-cabecalho {
+    font-size: clamp(18px, 2.5vh, 22px);
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Logos Superiores */
+.header-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.header-logos img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Navegação */
+nav {
+    width: 100%;
+    max-width: 380px;
+}
+
+.links-list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Estilo dos Botões de Link */
+.links-list a {
+    background-color: var(--primary-red);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: var(--text-white);
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: clamp(16px, 2.2vh, 22px);
+    font-size: clamp(14px, 2vh, 16px);
+}
+
+.links-list a:hover,
+.links-list a:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-color);
+    background-color: var(--primary-red-darker);
+    outline: none;
+}
+
+/* Animação de Entrada */
+.links-list li {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.links-list.loaded li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade para Notebooks e Monitores menores */
+@media (max-width: 1400px) {
+    .image-panel {
+        width: 60%;
+    }
+    .links-panel {
+        margin-left: 60%;
+        width: 40%;
+        padding: 30px;
+    }
+}
+
+/* Layout Responsivo para Mobile */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+    }
+
+    .links-panel {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        padding: 40px 20px;
+    }
+
+    .mascot-image {
+        width: 70%;
+        height: auto;
+    }
+}
