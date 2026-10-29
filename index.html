@@ -2,45 +2,105 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Links - MapleBear</title>
-    <link rel="icon" type="image/png" href="IMG/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Central de Acessos da comunidade escolar Maple Bear e ABA.">
+    <meta name="theme-color" content="#ffffff">
+    <title>ABA Links — Maple Bear</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="Imagens/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="Imagens/favicon-192.png">
+    <link rel="apple-touch-icon" href="Imagens/apple-touch-icon.png">
+
+    <link rel="preload" as="font" type="font/woff2" href="fonts/poppins-500.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/poppins-600.woff2" crossorigin>
+
+    <link rel="preload" as="image" href="Imagens/logo-maple-bear.webp" type="image/webp">
+    <link rel="preload" as="image" fetchpriority="high"
+          imagesrcset="Imagens/hero/circulo-800.webp 800w, Imagens/hero/circulo-1280.webp 1280w, Imagens/hero/circulo-1920.webp 1920w, Imagens/hero/circulo-2560.webp 2560w, Imagens/hero/circulo-3840.webp 3840w"
+          imagesizes="100vw">
+
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <main class="container">
-        <section class="image-panel">
-            <img src="IMG/BEAR FINAL.png" alt="Mascote da MapleBear" class="mascot-image" width="800" height="950">
-        </section>
-        <aside class="links-panel">
-            <p class="texto-cabecalho">Bem-vindo ao portal de acesso rápido!</p>
-            <div class="header-logos">
-                <img src="IMG/LOGO MAPLE 1.png" alt="Logo MapleBear 1" width="150" height="100" loading="lazy">
-                <img src="IMG/LOGO MAPLE 2.png" alt="Logo MapleBear 2" width="150" height="75" loading="lazy">
-                <img src="IMG/LOGO MAPLE 3.png" alt="Logo MapleBear 3" width="150" height="100" loading="lazy">
+    <header class="site-header">
+        <div class="site-header__inner">
+
+            <div class="brand">
+                <img class="brand__aba" src="Imagens/logo-aba.svg" width="1809" height="556" alt="ABA">
+                <span class="brand__divider" aria-hidden="true"></span>
+                <img class="brand__maple" src="Imagens/logo-maple-bear.webp" width="900" height="324" alt="Maple Bear Canadian School, Canadian Elementary School e Canadian High School">
             </div>
-            <nav>
-    <ul class="links-list">
-        <li><a href="https://portalprofessor.abaweb.org/FrameHTML/Web/App/Edu/PortalDoProfessor/#/login" target="_blank" rel="noopener noreferrer"><img src="IMG/PORTAL.png" alt="" width="40" height="40" loading="lazy"><span>Portal do Professor</span></a></li>
-        <li><a href="https://portalcompras.abaweb.org/Corpore.Net/Login.aspx" target="_blank" rel="noopener noreferrer"><img src="IMG/PORTAL.png" alt="" width="40" height="40" loading="lazy"><span>Portal de Compras</span></a></li>
-        <li><a href="https://portalrh.abaweb.org/FrameHTML/Web/App/RH/PortalMeuRH/#/login" target="_blank" rel="noopener noreferrer"><img src="IMG/PORTAL.png" alt="" width="40" height="40" loading="lazy"><span>Registro do Ponto</span></a></li>
-        <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer"><img src="IMG/GMAIL.png" alt="" width="35" height="28" loading="lazy"><span>Gmail</span></a></li>
-        <li><a href="https://recife.maplebear.com.br/pt/" target="_blank" rel="noopener noreferrer"><img src="IMG/MAPLE BEAR RECIFE.png" alt="" width="40" height="45" loading="lazy"><span>Maple Bear Recife</span></a></li>
-        <li><a href="https://abanet.abaweb.org" target="_blank" rel="noopener noreferrer"><img src="IMG/ABANET.png" alt="" width="40" height="40" loading="lazy"><span>ABA.net</span></a></li>
-        <li><a href="https://sso.lex.education/" target="_blank" rel="noopener noreferrer"><img src="IMG/LEX.png" alt="" width="40" height="40" loading="lazy"><span>Lex</span></a></li>
-        <li><a href="https://web.toddleapp.com/?type=loginHome" target="_blank" rel="noopener noreferrer"><img src="IMG/TODDLE.png" alt="" width="40" height="40" loading="lazy"><span>Toddle</span></a></li>
-       
 
-    </ul>
-</nav>
-        </aside>
+            <nav class="site-nav" aria-label="Principal">
+                <ul class="site-nav__list">
+                    <li>
+                        <a class="site-nav__link site-nav__link--primary" href="#plataformas">
+                            <span>Nossas plataformas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <h1 class="sr-only">ABA Links — Maple Bear</h1>
+
+        <section id="plataformas" class="platforms" aria-labelledby="plataformas-titulo">
+            <div class="platforms__inner">
+                <header class="platforms__header">
+                    <h2 id="plataformas-titulo" class="platforms__title">Nossas plataformas</h2>
+                </header>
+
+                <!-- Os cards são gerados por cards.js a partir de platforms.js -->
+                <ul id="plataformas-lista" class="platforms__grid">
+                    <noscript><li class="platforms__noscript">Ative o JavaScript do navegador para ver as plataformas.</li></noscript>
+                </ul>
+            </div>
+        </section>
+
+        <section class="hero" aria-label="Boas-vindas">
+            <!--
+                Fotos decorativas em rotação (alt vazio). Só a primeira carrega com a página;
+                as demais são carregadas por script.js pouco antes de aparecerem.
+                Para trocar/adicionar: duplique um <img>, aponte data-srcset para os arquivos
+                em Imagens/hero e ajuste o enquadramento em --slide-focus.
+            -->
+            <div class="hero__media" aria-hidden="true">
+                <img class="hero__slide is-active" style="--slide-focus: 50% 55%"
+                     srcset="Imagens/hero/circulo-800.webp 800w, Imagens/hero/circulo-1280.webp 1280w, Imagens/hero/circulo-1920.webp 1920w, Imagens/hero/circulo-2560.webp 2560w, Imagens/hero/circulo-3840.webp 3840w"
+                     sizes="100vw" width="2560" height="1707" alt="" fetchpriority="high" decoding="async">
+
+                <img class="hero__slide" style="--slide-focus: 50% 50%"
+                     data-srcset="Imagens/hero/bear-games-800.webp 800w, Imagens/hero/bear-games-1280.webp 1280w, Imagens/hero/bear-games-1920.webp 1920w, Imagens/hero/bear-games-2560.webp 2560w, Imagens/hero/bear-games-3840.webp 3840w"
+                     width="2560" height="1707" alt="" decoding="async">
+
+                <img class="hero__slide" style="--slide-focus: 50% 35%"
+                     data-srcset="Imagens/hero/trilha-800.webp 800w, Imagens/hero/trilha-1280.webp 1280w, Imagens/hero/trilha-1920.webp 1920w, Imagens/hero/trilha-2560.webp 2560w, Imagens/hero/trilha-3840.webp 3840w"
+                     width="2560" height="1707" alt="" decoding="async">
+
+                <img class="hero__slide" style="--slide-focus: 50% 85%"
+                     data-srcset="Imagens/hero/barco-800.webp 800w, Imagens/hero/barco-1280.webp 1280w, Imagens/hero/barco-1920.webp 1920w, Imagens/hero/barco-2560.webp 2560w, Imagens/hero/barco-3840.webp 3840w"
+                     width="2560" height="1871" alt="" decoding="async">
+
+                <img class="hero__slide" style="--slide-focus: 50% 30%"
+                     data-srcset="Imagens/hero/noite-800.webp 800w, Imagens/hero/noite-1280.webp 1280w, Imagens/hero/noite-1920.webp 1920w, Imagens/hero/noite-2560.webp 2560w, Imagens/hero/noite-3840.webp 3840w"
+                     width="2560" height="1702" alt="" decoding="async">
+            </div>
+
+            <div class="hero__inner">
+                <p class="hero__text">Acesse as plataformas e ferramentas que fazem parte da nossa comunidade escolar.</p>
+            </div>
+        </section>
     </main>
 
-    <script src="script.js"></script>
-
-    </body>
+    <script src="platforms.js" defer></script>
+    <script src="icons.js" defer></script>
+    <script src="logos.js" defer></script>
+    <script src="cards.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
 </html>
