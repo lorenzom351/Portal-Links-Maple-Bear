@@ -1,4 +1,4 @@
-# ABA Links — Maple Bear
+# Acessos - ABA Maple Bear
 
 Central de Acessos institucional da comunidade escolar Maple Bear / ABA. Uma página única, sem rolagem em notebooks, com os atalhos para as plataformas usadas no dia a dia e um painel de fotos em rotação.
 
